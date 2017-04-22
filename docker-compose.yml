@@ -3,7 +3,7 @@ web:
   ports:
    - '8000:80' 
   volumes:
-   - ./crossUp:/var/www/html
+   - ./laravel:/var/www/html
    - ./docker/web/000-default.conf:/etc/apache2/sites-available/000-default.conf
   links:
    - mysql
