@@ -15,7 +15,8 @@ services:
     ports:
      - '33333:3306'
     volumes:
-     - ./docker/mysql:/var/lib/mysql
+     - ./docker/mysql/data:/var/lib/mysql
+     - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
     environment:
      - MYSQL_ROOT_PASSWORD=root
      - MYSQL_DATABASE=cross_up
